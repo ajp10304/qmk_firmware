@@ -11,14 +11,14 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  * |------+------+------+------+------+------|------+------+------+------+------+------|
  * | Shft |   Z  |   X  |   C  |   V  |   B  |   N  |   M  |  ,<  |  .>  |  /?  | Shft |
  * |------+------+------+------+------+------+------+------+------+------+------+------|
- * | Fn   | Ctrl | Alt  | GUI  |Lower | Bksp |Space |Raise | Shift| MENU | Ctrl | Fn2  |
+ * | Fn   | Ctrl | Alt  | GUI  |Lower |Space |Space |Raise | Shift| MENU | Ctrl | Fn2  |
  * `-----------------------------------------------------------------------------------'
  */
 [_QWERTY] = LAYOUT_ortho_4x12(
   LT(_NUMPAD, KC_ESC),   KC_Q,       KC_W,        KC_E,      KC_R,    KC_T,    KC_Y,    KC_U,    KC_I,      KC_O,      KC_P,       KC_BSPC                 ,
   MT(MOD_LSFT, KC_TAB),  KC_A,       KC_S,        KC_D,      KC_F,    KC_G,    KC_H,    KC_J,    KC_K,      KC_L,      KC_SCLN,    MT(MOD_RSFT, KC_ENT)    ,
   KC_LSHIFT,             KC_Z,       KC_X,        KC_C,      KC_V,    KC_B,    KC_N,    KC_M,    KC_COMM,   KC_DOT,    KC_SLSH,    KC_RSHIFT               ,
-  MO(_FUNC),             KC_LCTL,    KC_LALT,     KC_LGUI,   LOWER,   KC_BSPC, KC_SPC,  RAISE,   KC_LSHIFT, KC_BTN2,   KC_RCTL,    MO(_FUNC2)
+  MO(_FUNC),             KC_LCTL,    KC_LALT,     KC_LGUI,   LOWER,   KC_SPC,  KC_SPC,  RAISE,   KC_LSHIFT, KC_BTN2,   KC_RCTL,    MO(_FUNC2)
 ),
 
 /* Function
@@ -47,14 +47,14 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  * |------+------+------+------+------+------|------+------+------+------+------+------|
  * | Shift|  \|  |  `¬  |  #~  |  '@  |  -_  |  =+  |  #~  |  [{  |  ]}  |  '@  |Shift |
  * |------+------+------+------+------+------+------+------+------+------+------+------|
- * |      |      |      |      |Lower | Del  |Space |      | Next | Vol- | Vol+ | Play |
+ * |      |      |      | Bksp |Lower | Ent  |Space |      | Next | Vol- | Vol+ | Play |
  * `-----------------------------------------------------------------------------------'
  */
 [_LOWER] = LAYOUT_ortho_4x12(
   KC_1,        KC_2,            KC_3,           KC_4,           KC_5,          KC_6,          KC_7,           KC_8,            KC_9,           KC_0,          KC_DEL,          KC_BSPC                ,
   LSFT(KC_1),  LSFT(KC_2),      LSFT(KC_3),     LSFT(KC_4),     LSFT(KC_5),    LSFT(KC_6),    LSFT(KC_7),     LSFT(KC_8),      LSFT(KC_9),     LSFT(KC_0),    LCTL(KC_DEL),    LCTL(KC_BSPC)          ,
   KC_LSPO,     KC_NONUS_BSLASH, KC_GRAVE,       KC_NONUS_HASH,  KC_QUOT,       KC_MINS,       KC_EQL,         KC_NONUS_HASH,   KC_LBRC,        KC_RBRC,       KC_QUOT,         MT(MOD_RSFT, KC_ENT)   ,
-  _______,     _______,         _______,        _______,        _______,       KC_DEL,        _______,        _______,         KC_MNXT,        KC_VOLD,       KC_VOLU,         KC_MPLY
+  _______,     _______,         _______,        KC_BSPC,        _______,       KC_ENT,        _______,        _______,         KC_MNXT,        KC_VOLD,       KC_VOLU,         KC_MPLY
 ),
 
 /* Raise
